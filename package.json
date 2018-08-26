@@ -2,10 +2,11 @@
   "name": "poker-api-node",
   "version": "1.0.0",
   "description": "REST API for poker games, written in Node.js",
+  "repository": "git@github.com:The-Naive-Bayesian/poker-api-node.git",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "jest --watch"
   },
   "keywords": [
     "poker",
@@ -16,7 +17,24 @@
   "author": "The-Naive-Bayesian",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
-  }
+    "@types/jest": "^23.3.1",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {}
 }
