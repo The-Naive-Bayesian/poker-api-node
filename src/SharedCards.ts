@@ -18,7 +18,7 @@ export class SharedCards {
     private drawCards(deck: Deck, numberCards = 1): string[] {
         const cardsDrawn: string[] = [];
         for (let i=0; i<numberCards; i++) {
-            let card = deck.drawRandom()
+            let card = deck.drawRandom();
             this.cards.push(card);
             cardsDrawn.push(card);
         }
